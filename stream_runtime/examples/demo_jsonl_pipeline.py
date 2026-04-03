@@ -13,7 +13,7 @@ from stream_runtime.implementations.openai_source import OpenAIStreamChunkSource
 
 async def execute_one_object(obj: dict[str, Any]) -> dict[str, Any]:
     """Business logic injected by caller: execute one parsed JSON object."""
-    await asyncio.sleep(0.2)  # simulate async downstream I/O
+    await asyncio.sleep(0.2)
     text = str(obj.get("text", ""))
     return {
         "id": obj.get("id"),
